@@ -1,2 +1,2 @@
-# Detective-Game
-An interactive fiction detective game.
+# Precinct
+An interactive fiction Precinct game.
