@@ -1,2 +1,2 @@
 # Precinct
-An interactive fiction Precinct game.
+An interactive fiction game about running a Police Precinct.
