@@ -6,7 +6,7 @@ import { routes } from "./app.routes";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { HttpLoaderFactory } from "./app.module.factories";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
-import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+import { MaterialModule } from "./shared/material.module";
 
 @NgModule({
   declarations: [
@@ -15,6 +15,7 @@ import { TranslateHttpLoader } from "@ngx-translate/http-loader";
   imports: [
     BrowserModule,
     HttpClientModule,
+    MaterialModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
