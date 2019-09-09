@@ -1,8 +1,8 @@
 {
     "name": "com.dwsg.precinct",
     "displayName": "Precinct",
-    "version": "1.0.0",
-    "description": "A sample Apache Cordova application that responds to the deviceready event.",
+    "version": "0.0.999",
+    "description": "An interactive fiction game about running a Police Precinct.",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,18 @@
     "keywords": [
         "ecosystem:cordova"
     ],
-    "author": "Apache Cordova Team",
-    "license": "Apache-2.0"
+    "author": "Dick Wolff",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "cordova-admob": "^5.1.0",
+        "cordova-plugin-play-games-services": "^1.1.2"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-admob": {},
+            "cordova-plugin-play-games-services": {
+                "APP_ID": "you_app_id_here"
+            }
+        }
+    }
 }
