@@ -14,14 +14,16 @@
     "license": "Apache-2.0",
     "dependencies": {
         "cordova-admob": "^5.1.0",
-        "cordova-plugin-play-games-services": "^1.1.2"
+        "cordova-plugin-play-games-services": "^1.1.2",
+        "cordova-plugin-splashscreen": "^5.0.3"
     },
     "cordova": {
         "plugins": {
             "cordova-admob": {},
             "cordova-plugin-play-games-services": {
                 "APP_ID": "you_app_id_here"
-            }
+            },
+            "cordova-plugin-splashscreen": {}
         }
     }
 }
