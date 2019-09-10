@@ -1,2 +1,2 @@
-# Precinct
-An interactive fiction game about running a Police Precinct.
+# Pocket Detective
+An interactive fiction game about being a detective.
