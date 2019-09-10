@@ -1,29 +1,42 @@
 {
-    "name": "com.dwsg.pocketdetective",
-    "displayName": "Pocket Detective",
-    "version": "0.0.999",
-    "description": "An interactive fiction game about being a detective.",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "com.dwsg.pocketdetective",
+  "displayName": "Pocket Detective",
+  "version": "0.0.999",
+  "description": "An interactive fiction game about being a detective.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Dick Wolff",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "cordova-admob-sdk": "0.24.1",
+    "cordova-android": "^8.0.0",
+    "cordova-ios": "^5.0.1",
+    "cordova-plugin-admob-free": "^0.27.0",
+    "cordova-plugin-play-games-services": "^1.1.2",
+    "cordova-plugin-splashscreen": "^5.0.3",
+    "cordova-promise-polyfill": "0.0.2"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-admob-free": {
+        "ADMOB_APP_ID": "MY_ADMOB_ID"
+      },
+      "cordova-plugin-play-games-services": {
+        "APP_ID": "you_app_id_here"
+      },
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-whitelist": {}
     },
-    "keywords": [
-        "ecosystem:cordova"
-    ],
-    "author": "Dick Wolff",
-    "license": "Apache-2.0",
-    "dependencies": {
-        "cordova-admob": "^5.1.0",
-        "cordova-plugin-play-games-services": "^1.1.2",
-        "cordova-plugin-splashscreen": "^5.0.3"
-    },
-    "cordova": {
-        "plugins": {
-            "cordova-admob": {},
-            "cordova-plugin-play-games-services": {
-                "APP_ID": "you_app_id_here"
-            },
-            "cordova-plugin-splashscreen": {}
-        }
-    }
+    "platforms": [
+      "ios"
+    ]
+  },
+  "devDependencies": {
+    "cordova-plugin-whitelist": "^1.3.4"
+  }
 }

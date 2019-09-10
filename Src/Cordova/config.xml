@@ -16,16 +16,28 @@
 
     <platform name="android">
         <allow-intent href="market:*" />
-    
-        <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
-        <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi"/>
-        <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
-        <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
+		
+        <plugin name="cordova-admob-sdk" spec="~0.13.1">
+            <variable name="PLAY_SERVICES_VERSION" value="11.6.0" />
+        </plugin>
+
+		<preference name="SplashMaintainAspectRatio" value="true" />
+		
+        <splash src="res/screen/android/splash-hdpi.png" density="port-hdpi"/>
+		<splash src="res/screen/android/splash-ldpi.png" density="port-ldpi"/>
+		<splash src="res/screen/android/splash-mdpi.png" density="port-mdpi"/>
+		<splash src="res/screen/android/splash-xhdpi.png" density="port-xhdpi"/>
     </platform>
     
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
+
+        <config-file target="*-Info.plist" parent="GADApplicationIdentifier">
+            <string>YOUR_IOS_ADMOB_APP_ID_AS_FOUND_IN_ADMOB</string>
+        </config-file>
+
+		<preference name="FadeSplashScreen" value="false"/>
         
         <splash src="res/screen/ios/Default@2x~universal~anyany.png" />
     </platform>

@@ -1,0 +1,52 @@
+{
+  "cordova-plugin-splashscreen": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-splashscreen@5.0.3"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-admob-free": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-admob-free@^0.27.0"
+    },
+    "is_top_level": true,
+    "variables": {
+      "ADMOB_APP_ID": "MY_ADMOB_ID"
+    }
+  },
+  "cordova-plugin-play-games-services": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-play-games-services@^1.1.2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-promise-polyfill": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-promise-polyfill@~0.0.2"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-admob-sdk": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-admob-sdk@~0.24.1"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-whitelist": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-whitelist@1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}
