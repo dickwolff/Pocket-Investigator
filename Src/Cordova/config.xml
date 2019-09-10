@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.dwsg.precinct" version="0.0.999" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Precinct</name>
+<widget id="com.dwsg.pocketdetective" version="0.0.999" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Pocket Detective</name>
     <description>
-        An interactive fiction game about running a Police Precinct.
+        An interactive fiction game about being a detective.
     </description>
-    <author email="me@dickwolff.nl" href="https://github.com/dickwolff/Precinct-Game">
+    <author email="me@dickwolff.nl" href="https://github.com/dickwolff/Pocket-Detective">
         Dick Wolff
     </author>
     <content src="index.html" />

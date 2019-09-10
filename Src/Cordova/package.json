@@ -1,8 +1,8 @@
 {
-    "name": "com.dwsg.precinct",
-    "displayName": "Precinct",
+    "name": "com.dwsg.pocketdetective",
+    "displayName": "Pocket Detective",
     "version": "0.0.999",
-    "description": "An interactive fiction game about running a Police Precinct.",
+    "description": "An interactive fiction game about being a detective.",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
