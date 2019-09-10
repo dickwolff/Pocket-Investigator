@@ -23,10 +23,10 @@
   "cordova": {
     "plugins": {
       "cordova-plugin-admob-free": {
-        "ADMOB_APP_ID": "MY_ADMOB_ID"
+        "ADMOB_APP_ID": "{{ANDROID_ADMOB_ID}}"
       },
       "cordova-plugin-play-games-services": {
-        "APP_ID": "you_app_id_here"
+        "APP_ID": "{{ANDROID_PLAY_SERVICES_ID}}"
       },
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-whitelist": {}

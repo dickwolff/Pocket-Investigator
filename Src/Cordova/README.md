@@ -9,3 +9,7 @@ Used to integrate leaderboards and achievements in the game.
 
 ### [Cordova Splashscreen](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-splashscreen/#supported-platforms)
 Used for splashscreen on iOS and Android.
+
+## Building
+
+The ID's that are needed to configure AdMob and Play Services are templated. These will be placed into the respective files build-time. This way personal identifiers won't be placed on a public place like this GitHub repository.

@@ -34,7 +34,7 @@
         <allow-intent href="itms-apps:*" />
 
         <config-file target="*-Info.plist" parent="GADApplicationIdentifier">
-            <string>YOUR_IOS_ADMOB_APP_ID_AS_FOUND_IN_ADMOB</string>
+            <string>{{IOS_ADMOB_ID}}</string>
         </config-file>
 
 		<preference name="FadeSplashScreen" value="false"/>
