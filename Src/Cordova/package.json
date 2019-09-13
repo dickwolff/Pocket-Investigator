@@ -17,6 +17,7 @@
     "cordova-ios": "^5.0.1",
     "cordova-plugin-admob-free": "^0.27.0",
     "cordova-plugin-play-games-services": "^1.1.2",
+    "cordova-plugin-purchase": "^8.1.1",
     "cordova-plugin-splashscreen": "^5.0.3",
     "cordova-promise-polyfill": "0.0.2"
   },
@@ -29,7 +30,10 @@
         "APP_ID": "{{ANDROID_PLAY_SERVICES_ID}}"
       },
       "cordova-plugin-splashscreen": {},
-      "cordova-plugin-whitelist": {}
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-purchase": {
+        "BILLING_KEY": "{{ANDROID_BILLING_KEY}}"
+      }
     },
     "platforms": [
       "android",

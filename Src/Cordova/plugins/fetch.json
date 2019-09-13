@@ -14,7 +14,7 @@
     },
     "is_top_level": true,
     "variables": {
-      "ADMOB_APP_ID": "MY_ADMOB_ID"
+      "ADMOB_APP_ID": "{{ANDROID_ADMOB_ID}}"
     }
   },
   "cordova-plugin-play-games-services": {
@@ -48,5 +48,15 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-plugin-purchase": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-purchase"
+    },
+    "is_top_level": true,
+    "variables": {
+      "BILLING_KEY": "{{ANDROID_BILLING_KEY}}"
+    }
   }
 }
