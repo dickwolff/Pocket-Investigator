@@ -7,6 +7,8 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { HttpLoaderFactory } from "./app.module.factories";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { MaterialModule } from "./shared/material.module";
+import { ServicesModule } from "./shared/services.module";
+import { LoaderModule } from "./loader/loader.module";
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { MaterialModule } from "./shared/material.module";
     BrowserModule,
     HttpClientModule,
     MaterialModule,
+    ServicesModule,
+    LoaderModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -26,6 +30,7 @@ import { MaterialModule } from "./shared/material.module";
     RouterModule.forRoot(routes)
   ],
   providers: [
+    MaterialModule
   ],
   bootstrap: [AppComponent]
 })
