@@ -1,22 +1,19 @@
 import { Component, OnInit } from "@angular/core";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
+  selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent implements OnInit {
 
-  async ngOnInit() {
+  constructor(private translateService: TranslateService) { }
 
-    // Start the game.
-    await this.startGame();
-  }
+  ngOnInit(): void {
 
-  /**
-   * Start the game mechanics.
-   */
-  public async startGame(): Promise<void> {
-
-    // Step 1. Load save game.
+    // Set the default language.
+    this.translateService.setDefaultLang("en");
+    this.translateService.use("en");
   }
 }

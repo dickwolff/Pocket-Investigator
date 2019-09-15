@@ -1,15 +1,15 @@
-import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { LoaderComponent } from "./loader.component";
-// import { ServicesModule } from "../shared/services.module";
+import { MaterialModule } from "../material.module";
+import { TranslateModule } from "@ngx-translate/core";
 
 @NgModule({
   declarations: [
     LoaderComponent
   ],
   imports: [
-    BrowserModule,
-    //ServicesModule
+    MaterialModule,
+    TranslateModule.forChild()
   ],
   providers: [
   ],

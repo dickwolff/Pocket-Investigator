@@ -5,32 +5,33 @@ import { RouterModule } from "@angular/router";
 import { routes } from "./app.routes";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { HttpLoaderFactory } from "./app.module.factories";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
-import { MaterialModule } from "./shared/material.module";
 import { ServicesModule } from "./shared/services/services.module";
 import { LoaderModule } from "./loader/loader.module";
+import { GameModule } from "./game/game.module";
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
+    GameModule,
     HttpClientModule,
-    MaterialModule,
-    ServicesModule,
     LoaderModule,
+    RouterModule.forRoot(routes),
+    ServicesModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
         useFactory: (HttpLoaderFactory),
         deps: [HttpClient]
       }
-    }),
-    RouterModule.forRoot(routes)
+    })
   ],
   providers: [
-    MaterialModule
   ],
   bootstrap: [AppComponent]
 })
