@@ -49,7 +49,7 @@ module.exports = function (config) {
     singleRun: false,
     junitReporter: {
       outputDir: "", // Results of the test run will be saved in the format `$outputDir/$browserName.xml`.
-      outputFile: "PocketDetective.TestRun.xml"
+      outputFile: "PocketInvestigator.TestRun.xml"
     },
     browserDisconnectTolerance: 2,
     browserDisconnectTimeout: 40000,
