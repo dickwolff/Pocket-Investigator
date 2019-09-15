@@ -1,8 +1,8 @@
 {
-  "name": "com.dwsg.pocketdetective",
-  "displayName": "Pocket Detective",
+  "name": "com.dwsg.pocketinvestigator",
+  "displayName": "Pocket Investigator",
   "version": "0.0.999",
-  "description": "An interactive fiction game about being a detective.",
+  "description": "An interactive fiction game about being an investigator.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
