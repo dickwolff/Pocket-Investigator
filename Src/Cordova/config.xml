@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.dwsg.pocketdetective" version="0.0.999" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Pocket Detective</name>
+<widget id="com.dwsg.pocketinvestigator" version="0.0.999" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Pocket Investigator</name>
     <description>
-        An interactive fiction game about being a detective.
+        An interactive fiction game about being an investigator.
     </description>
-    <author email="me@dickwolff.nl" href="https://github.com/dickwolff/Pocket-Detective">
+    <author email="me@dickwolff.nl" href="https://github.com/dickwolff/Pocket-Investigator">
         Dick Wolff
     </author>
     <content src="index.html" />

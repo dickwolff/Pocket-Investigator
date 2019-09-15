@@ -1,2 +1,2 @@
-# Pocket Detective
-An interactive fiction game about being a detective.
+# Pocket Investigator
+An interactive fiction game about being an investigator.
