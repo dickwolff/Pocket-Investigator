@@ -1,0 +1,23 @@
+<div class="container">
+
+  <!-- The job you currently fulfill. -->
+  <div class="block job">
+    <div class="prefix" [translate]="'game.abbr.job'"></div>
+    <div [textContent]="user.job"></div>
+  </div>
+
+  <!-- Your reputation. -->
+  <div class="block reputation">
+    <div class="prefix" [translate]="'game.abbr.rep'"></div>
+    <div [textContent]="user.reputation"></div>
+  </div>
+
+  <!-- Your current cashflow. -->
+  <div class="block financial">
+    <div class="prefix" [translate]="'game.abbr.fin'"></div>
+    <div>
+      {{ user.financial.income }} / {{ user.financial.outcome }}
+    </div>
+  </div>
+
+</div>

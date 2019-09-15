@@ -1,15 +1,15 @@
 import { DatabaseService } from "../core/database.service";
 import { DexieService } from "../core/dexie.service";
-import { SaveGame } from "../../domain/saveGame.interface";
+import { User } from "../../domain/user.interface";
 
-const databaseName = "amios";
-const tableName = "spoorkaart";
+const databaseName = "PocketDetective";
+const tableName = "savegame";
 
-export class SaveDatabase extends DatabaseService<SaveGame> {
+export class SaveDatabase extends DatabaseService<User> {
 
   constructor() {
     super(new DexieService(databaseName), tableName, {
-      savegame: "username" // Put the index on the username.
+      savegame: "username" // Set the index on the username.
     });
   }
 }

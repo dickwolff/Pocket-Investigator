@@ -7,7 +7,7 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { HttpLoaderFactory } from "./app.module.factories";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { MaterialModule } from "./shared/material.module";
-import { ServicesModule } from "./shared/services.module";
+import { ServicesModule } from "./shared/services/services.module";
 import { LoaderModule } from "./loader/loader.module";
 
 @NgModule({

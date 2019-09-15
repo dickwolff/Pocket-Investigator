@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { SaveGameService } from "./services/save-game/save-game.service";
+import { SaveGameService } from "./save-game/save-game.service";
 
 @NgModule({
   imports: [
