@@ -3,15 +3,25 @@
   "compilerOptions": {
     "baseUrl": "./",
     "downlevelIteration": true,
+    "importHelpers": true,
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
     "declaration": false,
-    "module": "esnext",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "importHelpers": true,
+    "forceConsistentCasingInFileNames": true,
+    "strictPropertyInitialization": false,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "target": "es2015",
+    "module": "esnext",
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -19,5 +29,8 @@
       "es2018",
       "dom"
     ]
-  }
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }

@@ -1,5 +1,15 @@
 {
-  "app": {
-    "name": "Pocket Detective"
+  "abbr": {
+    "cur": "Cur",
+    "fin": "$",
+    "job": "Job",
+    "rep": "Rep"
+  },
+  "game": {},
+  "states": {
+    "loading": "Loading"
+  },
+  "titles": {
+    "gameName": "Pocket Investigator"
   }
 }
