@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - master
+    paths:
+    - 'Src/Game/*'
+    - 'Src/Game/*/*'
+    - 'Src/Game/*/*/*'
 
 jobs:
   build:
