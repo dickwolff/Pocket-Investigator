@@ -1,0 +1,21 @@
+name: CI
+
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build Angular project
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: dickwolff/Pocket-Investigator@master
+    - name: Navigate to Angular project
+      run: cd Src/Game
+    - name: Install NPM dependencies
+      run: npm install
+    - name: Build Angular project
+      run: ng build --aot
