@@ -4,6 +4,8 @@
   background-color: $red;
 
   .inner-container {
-    padding: 32px;
+    height: 100%;
+    margin: 32px;
+    position: relative;
   }
 }

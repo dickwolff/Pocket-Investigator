@@ -4,7 +4,7 @@
     <description>
         An interactive fiction game about being an investigator.
     </description>
-    <author email="me@dickwolff.nl" href="https://github.com/dickwolff/Pocket-Investigator">
+    <author email="dev@dickwolff.nl" href="https://github.com/dickwolff/Pocket-Investigator">
         Dick Wolff
     </author>
     <content src="index.html" />

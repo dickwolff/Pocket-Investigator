@@ -1,6 +1,5 @@
 import { NgModule } from "@angular/core";
 import { LoaderComponent } from "./loader.component";
-import { MaterialModule } from "../material.module";
 import { TranslateModule } from "@ngx-translate/core";
 
 @NgModule({
@@ -8,7 +7,6 @@ import { TranslateModule } from "@ngx-translate/core";
     LoaderComponent
   ],
   imports: [
-    MaterialModule,
     TranslateModule.forChild()
   ],
   providers: [

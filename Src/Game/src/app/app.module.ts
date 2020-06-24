@@ -5,7 +5,6 @@ import { RouterModule } from "@angular/router";
 import { routes } from "./app.routes";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { HttpLoaderFactory } from "./app.module.factories";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { ServicesModule } from "./shared/services/services.module";
 import { LoaderModule } from "./loader/loader.module";
@@ -16,7 +15,6 @@ import { GameModule } from "./game/game.module";
     AppComponent
   ],
   imports: [
-    BrowserAnimationsModule,
     BrowserModule,
     GameModule,
     HttpClientModule,

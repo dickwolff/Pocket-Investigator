@@ -2,7 +2,6 @@ import { NgModule } from "@angular/core";
 import { GameComponent } from "./game.component";
 import { ComponentsModule } from "../shared/components/components.module";
 import { ServicesModule } from "../shared/services/services.module";
-import { MaterialModule } from "../material.module";
 import { TranslateModule } from "@ngx-translate/core";
 
 @NgModule({
@@ -10,9 +9,8 @@ import { TranslateModule } from "@ngx-translate/core";
     GameComponent
   ],
   imports: [
-    ComponentsModule,
-    MaterialModule,
     ServicesModule,
+    ComponentsModule,
     TranslateModule.forChild()
   ],
   providers: [
