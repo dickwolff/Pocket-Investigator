@@ -1,11 +1,19 @@
-@import "../../styles.scss";
+/* Pocket Investigator */
+
+@import "../../controls.scss";
 
 .page-container {
-  background-color: $red;
 
   .inner-container {
     height: 100%;
     margin: 32px;
     position: relative;
+  }
+
+  nav {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

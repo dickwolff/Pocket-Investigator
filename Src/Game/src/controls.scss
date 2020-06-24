@@ -1,0 +1,25 @@
+/* Pocket Investigator */
+
+@import "./colors.scss";
+
+button {
+  padding: 1rem 2rem;
+  text-align: center;
+  border: 0;
+  outline: none;
+
+  &:active, &:focus {
+    border: 0;
+    border-style: outset;
+  }
+
+  &.red {
+    min-width: 160px;
+    background: url("assets/images/buttons/red.png");
+    color: $white;
+
+    &:active {
+      background: url("assets/images/buttons/red_pressed.png");
+    }
+  }
+}
