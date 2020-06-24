@@ -1,0 +1,11 @@
+@import "../../styles.scss";
+
+.page-container {
+  background-color: $red;
+
+  .inner-container {
+    height: 100%;
+    margin: 32px;
+    position: relative;
+  }
+}
