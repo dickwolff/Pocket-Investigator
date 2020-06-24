@@ -1,16 +1,16 @@
 import { NgModule } from "@angular/core";
-import { LoaderComponent } from "./loader.component";
+import { MenuComponent } from "./menu.component";
 import { TranslateModule } from "@ngx-translate/core";
 
 @NgModule({
   declarations: [
-    LoaderComponent
+    MenuComponent
   ],
   imports: [
     TranslateModule.forChild()
   ],
   providers: [
   ],
-  bootstrap: [LoaderComponent]
+  bootstrap: [MenuComponent]
 })
-export class LoaderModule { }
+export class MenuModule { }
