@@ -1,5 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.dwsg.pocketinvestigator" version="0.0.999" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.dwsg.pocketinvestigator" version="0.0.999" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+
+    <!-- App meta data. -->
     <name>Pocket Investigator</name>
     <description>
         An interactive fiction game about being an investigator.
@@ -8,41 +10,41 @@
         Dick Wolff
     </author>
     <content src="index.html" />
+
+    <!-- Cordova builld hooks. -->
+    <hook src="hooks/copyWebApp.sh" type="before_prepare" />
+
+    <!-- Plugins. -->
     <plugin name="cordova-plugin-whitelist" spec="1" />
+
+    <!-- App config. -->
     <access origin="*" />
-    
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
 
+    <!-- Android config. -->
     <platform name="android">
         <allow-intent href="market:*" />
 
-        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
-            <application android:isGame="true" />
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target=" /manifest/application">
+            <!-- <application android:isGame="true" /> -->
         </edit-config>
-		
-        <plugin name="cordova-admob-sdk" spec="~0.13.1">
-            <variable name="PLAY_SERVICES_VERSION" value="11.6.0" />
-        </plugin>
 
-	<preference name="SplashMaintainAspectRatio" value="true" />
-		
-        <splash src="res/screen/android/splash-hdpi.png" density="port-hdpi"/>
-	<splash src="res/screen/android/splash-ldpi.png" density="port-ldpi"/>
-	<splash src="res/screen/android/splash-mdpi.png" density="port-mdpi"/>
-	<splash src="res/screen/android/splash-xhdpi.png" density="port-xhdpi"/>
+        <preference name="SplashMaintainAspectRatio" value="true" />
+
+        <splash src="res/screen/android/splash-hdpi.png" density="port-hdpi" />
+        <splash src="res/screen/android/splash-ldpi.png" density="port-ldpi" />
+        <splash src="res/screen/android/splash-mdpi.png" density="port-mdpi" />
+        <splash src="res/screen/android/splash-xhdpi.png" density="port-xhdpi" />
     </platform>
-    
+
+    <!-- iOS config. -->
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
 
-        <config-file target="*-Info.plist" parent="GADApplicationIdentifier">
-            <string>{{IOS_ADMOB_ID}}</string>
-        </config-file>
+        <preference name="FadeSplashScreen" value="false" />
 
-		<preference name="FadeSplashScreen" value="false"/>
-        
         <splash src="res/screen/ios/Default@2x~universal~anyany.png" />
     </platform>
 </widget>

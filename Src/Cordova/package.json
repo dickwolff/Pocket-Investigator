@@ -15,20 +15,12 @@
   "dependencies": {
     "cordova-android": "^8.1.0",
     "cordova-ios": "^6.1.0",
-    "cordova-plugin-admob-free": "^0.27.0",
-    "cordova-plugin-play-games-services": "^1.1.2",
     "cordova-plugin-purchase": "^10.2.0",
     "cordova-plugin-splashscreen": "^5.0.4",
     "cordova-promise-polyfill": "0.0.2"
   },
   "cordova": {
     "plugins": {
-      "cordova-plugin-admob-free": {
-        "ADMOB_APP_ID": "{{ANDROID_ADMOB_ID}}"
-      },
-      "cordova-plugin-play-games-services": {
-        "APP_ID": "{{ANDROID_PLAY_SERVICES_ID}}"
-      },
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-whitelist": {},
       "cordova-plugin-purchase": {
@@ -36,8 +28,8 @@
       }
     },
     "platforms": [
-      "android",
-      "ios"
+      "ios",
+      "android"
     ]
   },
   "devDependencies": {
