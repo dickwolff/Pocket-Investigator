@@ -26,9 +26,7 @@
     <platform name="android">
         <allow-intent href="market:*" />
 
-        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target=" /manifest/application">
-            <!-- <application android:isGame="true" /> -->
-        </edit-config>
+        <custom-preference name="android-manifest/application/@android:isGame" value="true" />
 
         <preference name="SplashMaintainAspectRatio" value="true" />
 
