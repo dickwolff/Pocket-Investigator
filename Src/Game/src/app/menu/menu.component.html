@@ -1,7 +1,10 @@
 <div class="page-container">
 
-  <!-- Background image. -->
-  <div class="bg"></div>
+  <!-- Background image with overlay. -->
+  <div class="bg">
+    <div class="img"></div>
+    <div class="overlay"></div>
+  </div>
 
   <div class="inner-container">
 
@@ -10,9 +13,9 @@
 
     <!-- Menu options. -->
     <nav>
-      <button class="red" translate>menu.play</button>
-      <button class="red" translate>menu.stats</button>
-      <button class="red" translate>menu.settings</button>
+      <button class="red" (click)="play()" translate>menu.play</button>
+      <button class="red" (click)="stats()" translate>menu.stats</button>
+      <button class="red" (click)="settings()" translate>menu.settings</button>
     </nav>
 
   </div>
