@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   templateUrl: "./loader.component.html",
@@ -6,7 +7,10 @@ import { Component } from "@angular/core";
 })
 export class LoaderComponent {
 
+  constructor(private readonly router: Router) { }
+
+  // Temp nav.
   public go(): void {
-    window.location.href = "/menu";
+    this.router.navigate(["menu"]);
   }
 }
