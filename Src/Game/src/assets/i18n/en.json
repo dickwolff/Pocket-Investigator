@@ -15,6 +15,9 @@
     "loading": "Loading"
   },
   "titles": {
-    "gameName": "Pocket Investigator"
+    "gameName": "Pocket Investigator",
+    "screens": {
+      "settings": "Settings"
+    }
   }
 }

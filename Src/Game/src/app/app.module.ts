@@ -9,6 +9,7 @@ import { ServicesModule } from "./shared/services/services.module";
 import { LoaderModule } from "./loader/loader.module";
 import { GameModule } from "./game/game.module";
 import { MenuModule } from "./menu/menu.module";
+import { SettingsModule } from "./settings/settings.module";
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MenuModule } from "./menu/menu.module";
     LoaderModule,
     BrowserModule,
     ServicesModule,
+    SettingsModule,
     AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot({
