@@ -3,17 +3,31 @@
 @import "../../controls.scss";
 
 .page-container {
+  display: flex;
+  align-items: center;
 
   .inner-container {
     height: 100%;
-    margin: 32px;
+    margin: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
   }
 
   nav {
-    margin-top: 5rem;
+    margin-top: 8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    > * {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .version {
+    position: absolute;
+    bottom: 1.5rem
   }
 }

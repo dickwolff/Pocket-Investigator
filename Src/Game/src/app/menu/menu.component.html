@@ -1,15 +1,23 @@
 <div class="page-container">
 
+  <!-- Background image. -->
+  <div class="bg"></div>
+
   <div class="inner-container">
 
     <!-- Game name.-->
-    <h2 [translate]="'titles.gameName'"></h2>
+    <h1 translate>titles.gameName</h1>
 
     <!-- Menu options. -->
     <nav>
-      <button class="red">Stats</button>
+      <button class="red" translate>menu.play</button>
+      <button class="red" translate>menu.stats</button>
+      <button class="red" translate>menu.settings</button>
     </nav>
 
   </div>
+
+  <!-- Game version. -->
+  <div class="version">{{ gameVersion }}</div>
 
 </div>

@@ -6,6 +6,11 @@
     "rep": "Rep"
   },
   "game": {},
+  "menu": {
+    "play": "Play",
+    "settings": "Settings",
+    "stats": "Stats"
+  },
   "states": {
     "loading": "Loading"
   },

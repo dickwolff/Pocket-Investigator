@@ -4,6 +4,7 @@
 
 button {
   padding: 1rem 2rem;
+  font-size: 18px;
   text-align: center;
   border: 0;
   outline: none;
@@ -15,6 +16,7 @@ button {
 
   &.red {
     min-width: 160px;
+    min-height: 48px;
     background: url("assets/images/buttons/red.png");
     color: $white;
 
