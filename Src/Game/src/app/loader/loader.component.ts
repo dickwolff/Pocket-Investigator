@@ -4,4 +4,9 @@ import { Component } from "@angular/core";
   templateUrl: "./loader.component.html",
   styleUrls: ["./loader.component.scss"],
 })
-export class LoaderComponent { }
+export class LoaderComponent {
+
+  public go(): void {
+    window.location.href = "/menu";
+  }
+}

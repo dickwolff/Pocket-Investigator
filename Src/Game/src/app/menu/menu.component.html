@@ -1,12 +1,26 @@
 <div class="page-container">
 
+  <!-- Background image with overlay. -->
+  <div class="bg">
+    <div class="img"></div>
+    <div class="overlay"></div>
+  </div>
+
   <div class="inner-container">
 
     <!-- Game name.-->
-    <h2 [translate]="'titles.gameName'"></h2>
+    <h1 translate>titles.gameName</h1>
 
     <!-- Menu options. -->
+    <nav>
+      <button class="red" (click)="play()" translate>menu.play</button>
+      <button class="red" (click)="stats()" translate>menu.stats</button>
+      <button class="red" (click)="settings()" translate>menu.settings</button>
+    </nav>
 
   </div>
+
+  <!-- Game version. -->
+  <div class="version">{{ gameVersion }}</div>
 
 </div>

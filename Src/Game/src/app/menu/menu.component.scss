@@ -1,11 +1,63 @@
-@import "../../styles.scss";
+/* Pocket Investigator */
+
+@import "../../controls.scss";
 
 .page-container {
-  background-color: $red;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+   .img {
+    width: 100%;
+    height: 100%;
+    background-image: url("assets/images/city-bg.png");
+    background-size: cover;
+    animation: animatedBackground 36s linear infinite;
+   }
+
+   .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: $roman-red;
+    opacity: 0.2;
+   }
+  }
 
   .inner-container {
     height: 100%;
-    margin: 32px;
+    margin: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
   }
+
+  nav {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > * {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .version {
+    position: absolute;
+    bottom: 1.5rem;
+    color: $white;
+  }
+}
+
+@keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 0; }
 }
