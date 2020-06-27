@@ -43,11 +43,12 @@
       display: flex;
       flex-direction: row;
       justify-content: center;
+      align-items: center;
 
       span {
         width: 50%;
         display: block;
-        font-size: 20px;
+        font-size: 22px;
         text-align: left;
         word-spacing: 4px;
       }

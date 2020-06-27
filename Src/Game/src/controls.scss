@@ -18,11 +18,33 @@ button {
   &.red {
     min-width: 160px;
     min-height: 48px;
-    background: url("assets/images/buttons/red.png");
+    background: url("assets/images/controls/buttons/red.png");
     color: $white;
 
     &:active {
-      background: url("assets/images/buttons/red_pressed.png");
+      background: url("assets/images/controls/buttons/red_pressed.png");
+    }
+  }
+}
+
+.checkbox {
+  input[type=checkbox] {
+    display: none;
+
+    &:checked + .checker {
+      &.red {
+        background: url("assets/images/controls/toggles/red_on.png");
+      }
+    }
+  }
+
+  .checker {
+    width: 120px;
+    height: 48px;
+    display: block;
+
+    &.red {
+      background: url("assets/images/controls/toggles/red_off.png");
     }
   }
 }
