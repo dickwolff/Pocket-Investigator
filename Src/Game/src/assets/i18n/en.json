@@ -11,6 +11,10 @@
     "settings": "Settings",
     "stats": "Stats"
   },
+  "settings": {
+    "music": "Music",
+    "sound": "Sound effects"
+  },
   "states": {
     "loading": "Loading"
   },
