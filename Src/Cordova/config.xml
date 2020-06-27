@@ -29,6 +29,7 @@
         <custom-preference name="android-manifest/application/@android:isGame" value="true" />
 
         <preference name="SplashMaintainAspectRatio" value="true" />
+        <preference name="ShowSplashScreenSpinner" value="false" /> 
 
         <splash src="res/screen/android/splash-hdpi.png" density="port-hdpi" />
         <splash src="res/screen/android/splash-ldpi.png" density="port-ldpi" />
