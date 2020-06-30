@@ -5,7 +5,8 @@
   "description": "An interactive fiction game about being an investigator.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "android": "cordova build android"
   },
   "keywords": [
     "ecosystem:cordova"
