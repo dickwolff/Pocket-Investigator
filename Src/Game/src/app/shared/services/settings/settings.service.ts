@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Settings } from "./settings.interface";
+import { GameSettings } from "./gameSettings.interface";
 
 @Injectable()
 export class SettingsService {
@@ -9,7 +9,7 @@ export class SettingsService {
    *
    * @param newSettings The new value to save.
    */
-  public updateSettings(newSettings: Settings): void {
+  public updateSettings(newSettings: GameSettings): void {
 
     // Store (changed) settings.
     localStorage.setItem("pi_preferences", JSON.stringify(newSettings));
@@ -18,7 +18,7 @@ export class SettingsService {
   /**
    * Get current settings.
    */
-  public getSettings(): Settings {
+  public getSettings(): GameSettings {
 
     // First load current settings (if present).
     let settings = JSON.parse(localStorage.getItem("pi_preferences"));

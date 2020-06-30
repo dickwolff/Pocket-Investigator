@@ -20,6 +20,6 @@ export class AppComponent implements OnInit {
     this.translateService.use("en");
 
     // Play theme song.
-    this.soundService.playSong("Retro_Forest");
+    this.soundService.playSong("retro_forest");
   }
 }

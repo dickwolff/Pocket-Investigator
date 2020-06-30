@@ -1,4 +1,4 @@
-export interface Settings {
+export interface GameSettings {
   musicOn: boolean;
   soundOn: boolean;
 }

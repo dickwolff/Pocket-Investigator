@@ -18,7 +18,7 @@
       <div class="entry">
         <span translate>settings.music</span>
         <div class="checkbox">
-          <input type="checkbox" id="cbMusic">
+          <input type="checkbox" id="cbMusic" [checked]="settings.musicOn">
           <label for="cbMusic" class="checker red" (click)="toggleMusic()">
             <span class=" lbl off" translate>common.off</span>
             <span class="lbl on" translate>common.on</span>
@@ -30,8 +30,8 @@
       <div class="entry">
         <span translate>settings.sound</span>
         <div class="checkbox">
-          <input type="checkbox" id="cbSound">
-          <label for="cbSound" class="checker red">
+          <input type="checkbox" id="cbSound" [checked]="settings.soundOn">
+          <label for="cbSound" class="checker red" (click)="toggleSoundEffects()">
             <span class="lbl off" translate>common.off</span>
             <span class="lbl on" translate>common.on</span>
           </label>

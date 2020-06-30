@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { version } from "../../../package.json";
 import { Router } from "@angular/router";
+import { SoundService } from "../shared/services/sound/sound.service";
 
 @Component({
   templateUrl: "./menu.component.html",
@@ -16,26 +17,21 @@ export class MenuComponent {
   /**
    * Constructor.
    */
-  constructor(private readonly router: Router) { }
+  constructor(
+    private readonly router: Router,
+    private readonly soundService: SoundService) { }
 
   /**
-   * Navigate to Game.
+   * Navigate to given page.
+   *
+   * @param page: The page to navigate to.
    */
-  public play(): void {
-    //this.router.navigate(["game"]); <- Doesn't exist yet.
-  }
+  public async goTo(page: string): Promise<void> {
 
-  /**
-   * Navigate to Stats.
-   */
-  public stats(): void {
-    //this.router.navigate(["stats"]); <- Doesn't exist yet.
-  }
+    // Play the sound before navigation.
+    await this.soundService.playSoundEffect("button");
 
-  /**
-   * Navigate to Settings.
-   */
-  public settings(): void {
-    this.router.navigate(["settings"]);
+    // And navigate.
+    this.router.navigate([page]);
   }
 }

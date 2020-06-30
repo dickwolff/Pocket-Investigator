@@ -5,10 +5,15 @@ import { SettingsService } from "../settings/settings.service";
 export class SoundService {
 
   private songs: string[] = [
-    "Retro_Forest"
+    "retro_forest"
+  ];
+
+  private soundEffects: string[] = [
+    "button"
   ];
 
   private activeSong: HTMLAudioElement;
+  private activeSound: HTMLAudioElement;
 
   constructor(private readonly settingsService: SettingsService) { }
 
@@ -43,12 +48,63 @@ export class SoundService {
   }
 
   /**
+   * Play a sound effect by given name.
+   *
+   * @param name The sound effect to play.
+   */
+  public playSoundEffect(name: string) {
+
+    // Check wether the sound effect actually exists.
+    if (!this.soundEffects.includes(name)) {
+      throw new Error(`The sound effect ${name} does not exist!`);
+    }
+
+    // Create the audio object to play the requested sound effect.
+    let audio = new Audio();
+    audio.src = `./assets/sounds/${name}.wav`;
+    audio.load();
+    audio.autoplay = false;
+
+    // If a sound effect is active, pause it.
+    if (this.activeSound) {
+
+      // Save current sound level (in case of muted by preference).
+      audio.volume = this.activeSound.volume;
+
+      // Clear the audio.
+      this.activeSound.pause();
+      this.activeSound = null;
+    }
+
+    // Overwrite (or assign) the active sound effect.
+    this.activeSound = audio;
+
+    // Play audio.
+    this.activeSound.play();
+  }
+
+  /**
    * Toggle between mute and unmute.
    */
   public toggleMute(): void {
 
+    // Load current setting.
+    const settings = this.settingsService.getSettings();
+
+    // Toggle value (inverted, on is off and vice versa).
+    this.activeSong.volume = settings.musicOn ? 0 : 1;
+
+    // Save preferences.
+    this.updatePreferences();
+  }
+
+  /**
+   * Toggle between mute and unmute for sound effects.
+   */
+  public toggleSoundEffects(): void {
+
     // Toggle value.
-    this.activeSong.volume = this.activeSong.volume === 0 ? 1 : 0;
+    this.activeSound.volume = this.activeSound.volume === 0 ? 1 : 0;
 
     // Save preferences.
     this.updatePreferences();
