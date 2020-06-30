@@ -12,10 +12,16 @@ export class SoundService {
     "button"
   ];
 
-  private activeSong: HTMLAudioElement;
-  private activeSound: HTMLAudioElement;
+  private activeSong: HTMLAudioElement = new Audio();
+  private activeSound: HTMLAudioElement = new Audio();
 
-  constructor(private readonly settingsService: SettingsService) { }
+  constructor(private readonly settingsService: SettingsService) {
+
+    // Load settings and set volume based on previous settings.
+    const settings = this.settingsService.getSettings();
+    this.activeSong.volume = settings.musicOn ? 1 : 0;
+    this.activeSound.volume = settings.soundOn ? 1 : 0;
+  }
 
   /**
    * Play a song by given name.
@@ -36,6 +42,11 @@ export class SoundService {
 
     // If a song is active, pause it.
     if (this.activeSong) {
+
+      // Save current sound level (in case of muted by preference).
+      audio.volume = this.activeSong.volume;
+
+      // Clear the audio.
       this.activeSong.pause();
       this.activeSong = null;
     }
