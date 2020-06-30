@@ -28,12 +28,26 @@ button {
 }
 
 .checkbox {
+  position: relative;
+
   input[type=checkbox] {
     display: none;
 
     &:checked + .checker {
       &.red {
         background: url("assets/images/controls/toggles/red_on.png");
+      }
+
+      .lbl {
+        &.off {
+          top: 0px;
+          left: 12px;
+        }
+
+        &.on {
+          top: 4px;
+          left: calc(50% + 12px);
+        }
       }
     }
   }
@@ -42,9 +56,31 @@ button {
     width: 120px;
     height: 48px;
     display: block;
+    z-index: 99;
 
     &.red {
       background: url("assets/images/controls/toggles/red_off.png");
+
+      .lbl {
+        color: $white;
+      }
+    }
+
+    .lbl {
+      top: calc(50% - 24px);
+      position: absolute;
+      line-height: 48px;
+      z-index: 1;
+
+      &.off {
+        top: 4px;
+        left: 11px;
+      }
+
+      &.on {
+        top: 0;
+        left: calc(50% + 16px);
+      }
     }
   }
 }

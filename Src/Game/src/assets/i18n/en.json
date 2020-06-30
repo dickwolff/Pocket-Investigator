@@ -5,6 +5,10 @@
     "job": "Job",
     "rep": "Rep"
   },
+  "common": {
+    "off": "Off",
+    "on": "On"
+  },
   "game": {},
   "menu": {
     "play": "Play",
