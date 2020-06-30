@@ -11,6 +11,6 @@ export class LoaderComponent {
 
   // Temp nav.
   public go(): void {
-    this.router.navigate(["menu"]);
+    this.router.navigate(["menu"], { replaceUrl: true });
   }
 }

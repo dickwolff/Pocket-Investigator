@@ -1,0 +1,50 @@
+<div class="page-container">
+
+  <!-- Background image with overlay. -->
+  <div class="bg">
+    <div class="img"></div>
+    <div class="overlay"></div>
+  </div>
+
+  <div class="inner-container">
+
+    <!-- Game name.-->
+    <h1 translate>titles.screens.settings</h1>
+
+    <!-- Settings. -->
+    <div class="settings">
+
+      <!-- Music. -->
+      <div class="entry">
+        <span translate>settings.music</span>
+        <div class="checkbox">
+          <input type="checkbox" id="cbMusic" [checked]="settings.musicOn">
+          <label for="cbMusic" class="checker red" (click)="toggleMusic()">
+            <span class=" lbl off" translate>common.off</span>
+            <span class="lbl on" translate>common.on</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Sound effects. -->
+      <div class="entry">
+        <span translate>settings.sound</span>
+        <div class="checkbox">
+          <input type="checkbox" id="cbSound" [checked]="settings.soundOn">
+          <label for="cbSound" class="checker red" (click)="toggleSoundEffects()">
+            <span class="lbl off" translate>common.off</span>
+            <span class="lbl on" translate>common.on</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- To come: access Google Play / Apple Game entry. -->
+
+    </div>
+
+  </div>
+
+  <!-- Game version. -->
+  <div class="version">{{ gameVersion }}</div>
+
+</div>

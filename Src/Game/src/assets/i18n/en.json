@@ -5,16 +5,27 @@
     "job": "Job",
     "rep": "Rep"
   },
+  "common": {
+    "off": "Off",
+    "on": "On"
+  },
   "game": {},
   "menu": {
     "play": "Play",
     "settings": "Settings",
     "stats": "Stats"
   },
+  "settings": {
+    "music": "Music",
+    "sound": "Sound effects"
+  },
   "states": {
     "loading": "Loading"
   },
   "titles": {
-    "gameName": "Pocket Investigator"
+    "gameName": "Pocket Investigator",
+    "screens": {
+      "settings": "Settings"
+    }
   }
 }

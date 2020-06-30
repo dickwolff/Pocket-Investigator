@@ -18,11 +18,69 @@ button {
   &.red {
     min-width: 160px;
     min-height: 48px;
-    background: url("assets/images/buttons/red.png");
+    background: url("assets/images/controls/buttons/red.png");
     color: $white;
 
     &:active {
-      background: url("assets/images/buttons/red_pressed.png");
+      background: url("assets/images/controls/buttons/red_pressed.png");
+    }
+  }
+}
+
+.checkbox {
+  position: relative;
+
+  input[type=checkbox] {
+    display: none;
+
+    &:checked + .checker {
+      &.red {
+        background: url("assets/images/controls/toggles/red_on.png");
+      }
+
+      .lbl {
+        &.off {
+          top: 0px;
+          left: 12px;
+        }
+
+        &.on {
+          top: 4px;
+          left: calc(50% + 12px);
+        }
+      }
+    }
+  }
+
+  .checker {
+    width: 120px;
+    height: 48px;
+    display: block;
+    z-index: 99;
+
+    &.red {
+      background: url("assets/images/controls/toggles/red_off.png");
+
+      .lbl {
+        color: $white;
+      }
+    }
+
+    .lbl {
+      top: calc(50% - 24px);
+      position: absolute;
+      line-height: 48px;
+      z-index: 1;
+
+      &.off {
+        top: 4px;
+        left: 11px;
+      }
+
+      &.on {
+        top: 0;
+        left: calc(50% + 16px);
+      }
     }
   }
 }
