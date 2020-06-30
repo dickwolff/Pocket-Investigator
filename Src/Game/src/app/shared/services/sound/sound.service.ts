@@ -38,6 +38,7 @@ export class SoundService {
     // Create the audio object to play the requested song.
     let audio = new Audio();
     audio.src = `./assets/music/${name}.mp3`;
+    audio.loop = true;
     audio.load();
 
     // If a song is active, pause it.
@@ -72,9 +73,9 @@ export class SoundService {
 
     // Create the audio object to play the requested sound effect.
     let audio = new Audio();
-    audio.src = `./assets/sounds/${name}.wav`;
+    audio.src = `./assets/sounds/${name}.mp3`;
+    audio.loop = false;
     audio.load();
-    audio.autoplay = false;
 
     // If a sound effect is active, pause it.
     if (this.activeSound) {
