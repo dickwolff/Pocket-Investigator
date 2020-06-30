@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { SettingsService } from "../settings/settings.service";
 
 @Injectable()
 export class SoundService {
@@ -8,6 +9,8 @@ export class SoundService {
   ];
 
   private activeSong: HTMLAudioElement;
+
+  constructor(private readonly settingsService: SettingsService) { }
 
   /**
    * Play a song by given name.
@@ -32,13 +35,34 @@ export class SoundService {
       this.activeSong = null;
     }
 
-    // Set volume to max.
-    audio.volume = 1;
-
     // Overwrite (or assign) the active song.
     this.activeSong = audio;
 
     // Play audio.
     this.activeSong.play();
+  }
+
+  /**
+   * Toggle between mute and unmute.
+   */
+  public toggleMute(): void {
+
+    // Toggle value.
+    this.activeSong.volume = this.activeSong.volume === 0 ? 1 : 0;
+
+    // Save preferences.
+    this.updatePreferences();
+  }
+
+  private updatePreferences(): void {
+
+    // Get current settings.
+    let settings = this.settingsService.getSettings();
+
+    // Set musicOn value based on volume of active song.
+    settings.musicOn = this.activeSong.volume === 0 ? false : true;
+
+    // Update the settings.
+    this.settingsService.updateSettings(settings);
   }
 }
