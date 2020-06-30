@@ -10,6 +10,7 @@ import { LoaderModule } from "./loader/loader.module";
 import { GameModule } from "./game/game.module";
 import { MenuModule } from "./menu/menu.module";
 import { SettingsModule } from "./settings/settings.module";
+import { SoundService } from "./shared/services/sound/sound.service";
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { SettingsModule } from "./settings/settings.module";
     })
   ],
   providers: [
+    SoundService
   ],
   bootstrap: [AppComponent]
 })
